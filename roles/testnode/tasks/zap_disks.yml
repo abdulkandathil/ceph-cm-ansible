@@ -50,14 +50,14 @@
   when: non_root_partitions|length > 0
 
 ## See https://github.com/ceph/ceph-ansible/issues/759#issue-153248281
-- name: Zap all non-root disks
-  shell: "sgdisk --zap-all /dev/{{ item.key }} || sgdisk --zap-all /dev/{{ item.key }}"
-  with_dict: "{{ ansible_devices }}"
-  when:
-    - item.key not in root_disk
-    - '"loop" not in item.key'
-    - '"ram" not in item.key'
-    - '"sr" not in item.key'
+#- name: Zap all non-root disks
+#  shell: "sgdisk --zap-all /dev/{{ item.key }} || sgdisk --zap-all /dev/{{ item.key }}"
+#  with_dict: "{{ ansible_devices }}"
+#  when:
+#    - item.key not in root_disk
+#    - '"loop" not in item.key'
+#    - '"ram" not in item.key'
+#    - '"sr" not in item.key'
 
 ## See https://tracker.ceph.com/issues/22354 and
 ## https://github.com/ceph/ceph/pull/20400
