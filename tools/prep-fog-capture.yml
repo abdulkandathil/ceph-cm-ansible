@@ -137,5 +137,5 @@
       name: "{{ ntp_service }}"
       state: started
 
-  - name: Sync the hardware clock
-    command: "hwclock --systohc"
+#  - name: Sync the hardware clock
+#    command: "hwclock --systohc"
